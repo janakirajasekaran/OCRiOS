@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F33BDFD8-1FBA-4B0E-BED4-2A9FFD553F0C</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3AD94AD89E354EA6EB1F558FB495B1217F664761</key>
+		<string>https://github.com/ldiqual/tesseract-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3AD94AD89E354EA6EB1F558FB495B1217F664761</key>
+		<string>tesseract-ios/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ldiqual/tesseract-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3AD94AD89E354EA6EB1F558FB495B1217F664761</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3AD94AD89E354EA6EB1F558FB495B1217F664761</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tesseract-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

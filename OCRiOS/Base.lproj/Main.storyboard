@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jhb-Te-BcM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Puq-tx-6Jy">
+            <objects>
+                <navigationController id="jhb-Te-BcM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nru-Qw-l9e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.086274509799999996" green="0.35294117650000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Uzc-lU-sHI" kind="relationship" relationship="rootViewController" id="r6o-wE-43d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJ5-IR-EOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="767"/>
+        </scene>
+        <!--OCR-->
+        <scene sceneID="PgP-1a-Eoa">
+            <objects>
+                <viewController id="Uzc-lU-sHI" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DyY-e4-KFU"/>
+                        <viewControllerLayoutGuide type="bottom" id="tne-kV-fzA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jLO-0d-qRh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftG-Dj-VGK">
+                                <rect key="frame" x="8" y="516" width="304" height="44"/>
+                                <color key="backgroundColor" red="0.086274509803921567" green="0.35294117647058826" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1US-sh-Uk9"/>
+                                </constraints>
+                                <state key="normal" title="Recognize Text From Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="g15-et-68i" kind="push" identifier="Recognize Text From Image" id="ocE-iC-kxX"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test2.png" translatesAutoresizingMaskIntoConstraints="NO" id="3bf-QV-0x5">
+                                <rect key="frame" x="8" y="72" width="304" height="436"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ftG-Dj-VGK" firstAttribute="leading" secondItem="jLO-0d-qRh" secondAttribute="leading" constant="8" id="5PP-2H-ak8"/>
+                            <constraint firstItem="ftG-Dj-VGK" firstAttribute="top" secondItem="3bf-QV-0x5" secondAttribute="bottom" constant="8" id="6J7-Qh-ihc"/>
+                            <constraint firstAttribute="trailing" secondItem="3bf-QV-0x5" secondAttribute="trailing" constant="8" id="PXL-nh-Y72"/>
+                            <constraint firstItem="3bf-QV-0x5" firstAttribute="top" secondItem="DyY-e4-KFU" secondAttribute="bottom" constant="8" id="YMq-Dy-wyt"/>
+                            <constraint firstAttribute="trailing" secondItem="ftG-Dj-VGK" secondAttribute="trailing" constant="8" id="egL-sW-XtM"/>
+                            <constraint firstItem="3bf-QV-0x5" firstAttribute="leading" secondItem="jLO-0d-qRh" secondAttribute="leading" constant="8" id="m39-MP-jJX"/>
+                            <constraint firstItem="tne-kV-fzA" firstAttribute="top" secondItem="ftG-Dj-VGK" secondAttribute="bottom" constant="8" id="zAj-J3-suZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="OCR" id="cq7-00-5C6">
+                        <barButtonItem key="rightBarButtonItem" title="Gallery" id="8mH-r2-Eta">
+                            <connections>
+                                <action selector="openGallery:" destination="Uzc-lU-sHI" id="PK6-fY-k8I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="3bf-QV-0x5" id="3nr-EJ-kZF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ge-dk-wiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="770"/>
+        </scene>
+        <!--Text From Image-->
+        <scene sceneID="7Aq-gz-oFN">
+            <objects>
+                <viewController id="g15-et-68i" customClass="RecognizeTextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tyq-te-02E"/>
+                        <viewControllerLayoutGuide type="bottom" id="D3o-df-IMg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8D7-F4-4Ib">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3K-ny-cbP">
+                                <rect key="frame" x="8" y="516" width="304" height="44"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.35294117650000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="b7g-Xh-a2M"/>
+                                </constraints>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPauseButtonPressed:" destination="g15-et-68i" eventType="touchUpInside" id="oD6-o9-hfN"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAB-Mb-pkU">
+                                <rect key="frame" x="8" y="72" width="304" height="436"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.35294117650000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D3o-df-IMg" firstAttribute="top" secondItem="r3K-ny-cbP" secondAttribute="bottom" constant="8" id="2TQ-bm-AoE"/>
+                            <constraint firstItem="lAB-Mb-pkU" firstAttribute="top" secondItem="tyq-te-02E" secondAttribute="bottom" constant="8" id="9fe-0X-wRE"/>
+                            <constraint firstItem="r3K-ny-cbP" firstAttribute="leading" secondItem="8D7-F4-4Ib" secondAttribute="leading" constant="8" id="WVo-5e-aOm"/>
+                            <constraint firstAttribute="trailing" secondItem="r3K-ny-cbP" secondAttribute="trailing" constant="8" id="dfQ-No-FOl"/>
+                            <constraint firstItem="r3K-ny-cbP" firstAttribute="top" secondItem="lAB-Mb-pkU" secondAttribute="bottom" constant="8" id="lcB-kg-Cej"/>
+                            <constraint firstAttribute="trailing" secondItem="lAB-Mb-pkU" secondAttribute="trailing" constant="8" id="thp-1i-TP9"/>
+                            <constraint firstItem="lAB-Mb-pkU" firstAttribute="leading" secondItem="8D7-F4-4Ib" secondAttribute="leading" constant="8" id="wMM-bW-prj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text From Image" id="Spl-OL-Pza">
+                        <barButtonItem key="rightBarButtonItem" title="Translate" id="yDj-he-LWj">
+                            <connections>
+                                <segue destination="ghO-Gd-URv" kind="push" id="Q2q-iu-LI3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playPauseButton" destination="r3K-ny-cbP" id="xht-ys-dyX"/>
+                        <outlet property="textToSpeak" destination="lAB-Mb-pkU" id="ZTA-CN-aFJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fea-Ec-xAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="786"/>
+        </scene>
+        <!--Translator View Controller-->
+        <scene sceneID="KKC-7A-4R4">
+            <objects>
+                <viewController id="ghO-Gd-URv" customClass="TranslatorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sbo-Ku-fWb"/>
+                        <viewControllerLayoutGuide type="bottom" id="enD-NX-y42"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z99-2p-P4K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYB-wU-aAV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BYB-wU-aAV" firstAttribute="leading" secondItem="Z99-2p-P4K" secondAttribute="leading" id="NfT-qS-QYv"/>
+                            <constraint firstAttribute="trailing" secondItem="BYB-wU-aAV" secondAttribute="trailing" id="o1H-t2-Rph"/>
+                            <constraint firstItem="BYB-wU-aAV" firstAttribute="top" secondItem="Z99-2p-P4K" secondAttribute="top" id="qlz-9x-hac"/>
+                            <constraint firstAttribute="bottom" secondItem="BYB-wU-aAV" secondAttribute="bottom" id="u2B-LX-Bjg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QaX-fk-7e5"/>
+                    <connections>
+                        <outlet property="webView" destination="BYB-wU-aAV" id="orE-Yc-AEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFt-AI-wvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376" y="786"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="test2.png" width="662" height="119"/>
+    </resources>
+</document>
